@@ -17,6 +17,11 @@ const abi = [
     "function balanceOfBatch(address[] calldata owners, uint256[] calldata ids) external view returns (uint256[] memory)"
 ];
 
+
+app.get('/', async (req, res) => {
+    res.send("Hello World");
+});
+
 app.get('/mint-count', async (req, res) => {
     if (!alchemyUrl || !contractAddress) {
         res.status(500).send('Contract address or Alchemy URL not configured');

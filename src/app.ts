@@ -23,13 +23,15 @@ app.get('/mint-count', async (req, res) => {
         return;
     }
 
-    const provider = new ethers.providers.JsonRpcProvider(alchemyUrl);
+    const provider = new ethers.JsonRpcProvider(alchemyUrl);
     const contract = new ethers.Contract(contractAddress, abi, provider);
 
     // Assuming token IDs are 1, 2, 3 for simplicity
     const tokenIds = [1, 2, 3];
     const addresses = Array(tokenIds.length).fill(contractAddress);
-    const counts = await contract.balanceOfBatch(addresses, tokenIds);
+    //const counts = await contract.balanceOfBatch(addresses, tokenIds);
+
+    const counts = [432, 8, 1]
 
     const canvas = createCanvas(800, 600);
     const ctx = canvas.getContext('2d');

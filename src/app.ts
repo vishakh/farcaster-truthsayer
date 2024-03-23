@@ -42,14 +42,14 @@ app.get('/mint-count', async (req, res) => {
     const ctx = canvas.getContext('2d');
 
     // Basic styling
-    ctx.fillStyle = '#fff';
-    ctx.fillRect(0, 0, 800, 600);
     ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, 800, 600);
+    ctx.fillStyle = '#fff';
     ctx.font = '30px Arial';
 
     // Drawing each token label with its count
     counts.forEach((count: any, index: number) => {
-        ctx.fillText(`${tokenLabels[index] || 'Token'}: ${count.toString()}`, 50, 100 + (index * 100));
+        ctx.fillText(`${tokenLabels[index] || 'Token'}: ${count.toString()}`, 50, 200 + (index * 100));
     });
 
     const buffer = canvas.toBuffer('image/png');

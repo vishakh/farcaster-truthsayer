@@ -1,0 +1,18 @@
+{
+  "name": "farcaster-truthsayer",
+  "version": "1.0.0",
+  "description": "Distributed oracle on Farcaster for the Frameworks 2024 hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.11.1",
+    "express": "^4.19.1"
+  }
+}
